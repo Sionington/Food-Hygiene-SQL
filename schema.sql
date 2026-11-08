@@ -2,18 +2,18 @@ DROP TABLE IF EXISTS establishments;
 DROP TABLE IF EXISTS authorities;
 
 CREATE TABLE authorities (
-    AuthorityID INTEGER PRIMARY KEY,
-    AuthorityName TEXT,
-    EstablishmentCount INTEGER,
-    AuthorityIDCode TEXT UNIQUE
+    authority_id INTEGER PRIMARY KEY,
+    authority_name TEXT,
+    establishment_count INTEGER,
+    authority_id_code TEXT UNIQUE
 );
 
 CREATE TABLE establishments (
-    EstablishmentID INTEGER PRIMARY KEY,
-    AuthorityIDCode TEXT REFERENCES authorities(AuthorityIDCode),
-    EstablishmentName TEXT,
-    RatingValue TEXT,
-    BusinessType TEXT,
-    PostCode TEXT,
-    RatingDate TEXT
+    establishment_id INTEGER PRIMARY KEY,
+    authority_id_code TEXT REFERENCES authorities(authority_id_code),
+    establishment_name TEXT,
+    rating_value TEXT,
+    business_type TEXT,
+    post_code TEXT,
+    rating_date TEXT
 );

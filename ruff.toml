@@ -1,0 +1,12 @@
+target-version = "py314"   # the Python you run
+
+[lint]
+extend-select = [
+    "E",    # layout errors, including lines that are too long
+    "W",    # stray whitespace
+    "N",    # PEP 8 naming
+    "I",    # import order
+    "UP",   # older syntax that newer Python has a better way for
+    "B",    # likely bugs ("bugbear"), such as a list as a default argument
+    "SIM",  # code that can be written more simply
+]
