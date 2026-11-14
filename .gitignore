@@ -5,6 +5,6 @@ __pycache__/
 *.pyc
 
 # Planning notes for my job search, not part of the project
-BRIEF.md
-ROADMAP.md
+*.md
+!README.md
 notes.txt
